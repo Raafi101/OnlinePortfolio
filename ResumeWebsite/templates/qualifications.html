@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% block title %}Qualifications{% endblock %}
+{% block content %}
+
+<style>
+    * {
+        margin: 0px; margin-bottom: 10px; font-family: Trebuchet MS, Arial, Helvetica; background-color: rgb(26, 26, 29)
+    }
+    h1 {
+        font-size: 2.5vw;
+        color: white;
+    }
+    h2 {
+        font-size: 1.6vw;
+        color: white;
+        margin-top: 3%;
+        color: rgb(195, 7, 63);
+        text-decoration: underline;
+    }
+    h4 {
+        font-size: 1.9vw;
+        color: white;
+    }
+    p {
+        font-size: 1.5vw;
+        color: white;
+    }
+    #nav1 .qual {
+        color: rgb(195, 7, 63);
+    }
+    #nav1 .qual:hover {
+    color: rgb(195, 7, 63);
+}
+</style>
+
+<h1 id="title">Qualifications</h1>
+
+    <div id = "education" style = "display: inline-block;">
+    <h2 id="sub">Education</h2>
+
+    <div id = "text" style = "float: left; width: 55%; margin-top: 2%;">
+        <h4 id="sub2">- Staten Island Technical Highschool</h4>
+        <p>Staten Island, New York</p>
+        <p>Graduated June 2018</p>
+        <p style="text-align: left; text-indent: 3%;">Staten Island Technical High School is one of the nine specialialized high schools in New York City. 
+            Admission is based on the Specialized High School Admissions Test. 
+            Staten Island Tech is one of the most prestegious high schools in the country with a strong emphasis on STEM fields with required Science, Technology, Engineering, and Math classes
+        </p>
+        <p style = "text-decoration: underline; ">Extracurriculars</p>
+        <p style="text-align: left; text-indent: 3%;">
+            Wind Ensemble, Marching Band, Jazz Band, S!NG Band, Spring Musical Band, Spring Musical Stage Crew, Science Olympiad, Sustainability Club
+        </p>
+
+        <h4 id="sub2" style="margin-top:5%;">- CUNY Hunter College (Yalow Honors)</h4>
+        <p>New York, New York</p>
+        <p style="margin-bottom: 10px;">Graduating June 2022</p>
+        <p style="text-align: left; text-indent: 3%;">Hunter College is one of the best colleges in all of New York City due to it's wide range of specialties.
+            These specialties include Medicine, Psychology, Political Science, Statistics, Mathematics, and Computer Science.
+        </p>
+        <p style = "text-decoration: underline; ">Extracurriculars</p>
+        <p style="text-align: left; text-indent: 3%;">
+            South Asian Culture Club (SACC) E-Board Member, Hunter Symphony
+        </p>
+    </div>
+
+        <div class = "qual" style = "width:40%; float: right; margin-top: 3%; margin-right: 0%;">
+
+        <image style="float: right; margin-left: 0px; margin-bottom: 3%; margin-top: 0px; width: 100%; height: 100%;" src="{{ url_for('static', filename='images/Siths1.png')}}">
+        <image style="float: right; margin-left: 0px; margin-bottom: 3%; margin-top: 0px; width: 100%; height: 100%;" src="{{ url_for('static', filename='images/Siths2.png')}}">
+        <image style="float: right; margin-left: 0px; margin-bottom: 3.5%; margin-top: 0px; width: 100%; height: 100%;" src="{{ url_for('static', filename='images/HunterRanking.jpg')}}">
+        <button type="button" style = "margin-right: 10px; font-size:1.3vw; outline: 2px solid rgb(78, 78, 80); background-color: rgb(78, 78, 80); color: white; float: center; width : 70%; height: 4vw" onclick = "location.href='/transcript';">College Unofficial Transcript</button>
+
+        </div>
+    </div>
+
+
+<div id = "work" style = "display: inline-block; margin-top: 5%;">
+    <h2 id="sub">Work Experience</h2>
+
+    <div id = "text" style = "float: left; width: 50%; margin-top: 2%;">
+        <h4 id="sub2">- Five Eleven Deli and Grocery</h4>
+        <p>Worked as a sales associate</p>
+        <p>Entrusted to mediate business-bank transactions</p>
+
+        <h4 id="sub2" style="margin-top:5%;">- Bright Leadership Academy</h4>
+        <p>Taught Math, English, and Science for grades 1-8</p>
+        <p>Tutored kids for the Specialized High School Admissions Test (SHSAT)</p>
+    </div>
+
+    <div id = "pics" class = "qual" style = "float: right; width: 45%; margin-top: 2%; margin-right: 5%;">
+        <image style="margin-left: 30px; margin-bottom: 0px; margin-top: 0px; width: 100%; height: 100%;" src="{{ url_for('static', filename='images/brightLeadershipAcademy.jpg')}}">
+    </div>
+</div>
+
+    
+<div id = "CSlangs" style = "display: inline-block; margin-top: 5%; margin-bottom: 0px;">
+    <h2 id="sub">Computer Languages</h2>
+
+    <div id = "text" style = "float: left; width: 40%; margin-top: 2%;">
+        <h4 id="sub2">- Python</h4>
+        <p>Experienced</p>
+        <p>Posseses wide range of knowledge</p>
+
+        <h4 id="sub2" style="margin-top:5%;">- C++</h4>
+        <p>Intermediate</p>
+        <p>Can make most types of programs</p>
+
+        <h4 id="sub2" style="margin-top:5%;">- HTML/CSS</h4>
+        <p>Intermediate</p>
+        <p>Can efficiently design websites</p>
+
+        <h4 id="sub2" style="margin-top:5%;">- MySQL</h4>
+        <p>Beginner</p>
+        <p>Can do simple search queries</p>
+
+    </div>
+
+    <div id = "pics" style = "float: right; width: 55%; margin-top: 2%; margin-right: 5%;">
+        <div id = set1 style = "float: top; margin-bottom: 5%;">
+        <image style="margin-left: 0px; margin-bottom: 0px; margin-top: 0px; width: 27%; height: 27%;" src="{{ url_for('static', filename='images/python.png')}}">
+        <image style="margin-left: 10%; margin-bottom: 0px; margin-top: 0px; width: 50%; height: 50%;" src="{{ url_for('static', filename='images/sql.png')}}">
+        </div>
+        <image style="margin-left: 0px; margin-bottom: 0px; margin-top: 0px; width: 25%; height: 25%;" src="{{ url_for('static', filename='images/c++.png')}}">
+        <image style="margin-left: 10%; margin-bottom: 0px; margin-top: 0px; width: 47%; height: 47%;" src="{{ url_for('static', filename='images/html.png')}}">
+    </div>
+</div>
+
+
+<div id = "skills" style = "width: 100%; display: inline-block; margin-top: 10%; margin-bottom: 0%;">
+
+    <div id = "hard" style = "float: left; width: 50%; margin-top: 0%; margin-left: 5%; margin-right: 0%">
+    <h2 id="sub" style="margin-top: 0px;">Hard Skills</h2>
+
+        <h4 id="sub2">- Programing (Python, C++, MySQL, HTML/CSS)</h4>
+
+        <h4 id="sub2">- AutoCAD</h4>
+
+        <h4 id="sub2">- Fusion360</h4>
+
+        <h4 id="sub2">- Revit</h4>
+
+        <h4 id="sub2">- Building and Upgrading Computers</h4>
+
+        <h4 id="sub2">- Photoshop</h4>
+
+        <h4 id="sub2">- FinalCut</h4>
+    </div>
+
+    <div id = "soft" style = "float: right; width: 40%; margin-top: 0%; margin-right: 5%; margin-left: 0%">
+    <h2 id="sub">Soft Skills</h2>
+
+        <h4 id="sub2">- Calculated</h4>
+
+        <h4 id="sub2">- Particular</h4>
+
+        <h4 id="sub2">- Socially adept</h4>
+
+        <h4 id="sub2">- Motivated</h4>
+
+        <h4 id="sub2">- Determined</h4>
+
+        <h4 id="sub2">- Creative</h4>
+
+        <h4 id="sub2">- Understanding</h4>
+    </div>
+</div>
+
+<div id = "things" style = "width: 100%; display: inline-block; margin-top: 5%">
+
+    <div id = "certs" style = "float: left; width: 40%; margin-top: 2%; margin-left: 5%; margin-right: 0%">
+
+    <h2 id="sub">Certifications and Honors</h2>
+
+        <h4 id="sub2">- Yalow Honors Student</h4>
+
+        <h4 id="sub2">- AutoCAD Certified (Certiport)</h4>
+
+        <h4 id="sub2">- National Honor Society Member (NHS)</h4>
+
+        <h4 id="sub2">- Tri-M Music Honor Society Member (Tri-M)</h4>
+    </div>
+
+
+    <div id = "langs" style = "float: right; width: 40%; margin-top: 2%; margin-right: 5%; margin-left: 0%">
+    <h2 id="sub">Spoken Languages</h2>
+
+        <h4 id="sub2">- Urdu/Hindi</h4>
+        <p>Conversational</p>
+
+        <h4 id="sub2">- Russian</h4>
+        <p>Intermediate</p>
+    </div>
+</div>
+
+    <div id = "intruments" style = "margin-top: 10%;">
+    <h2 id="sub">Instruments</h2>
+
+        <h4 id="sub2">- Guitar</h4>
+
+        <h4 id="sub2">- Trombone</h4>
+
+        <h4 id="sub2">- Baritone</h4>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,291 @@
+{% extends "base.html" %}
+{% block title %}CSProjects{% endblock %}
+{% block content %}
+
+<style>
+    * {
+        margin: 0px; margin-bottom: 10px; font-family: Trebuchet MS, Arial, Helvetica; background-color: rgb(26, 26, 29)
+    }
+    h1 {
+        font-size: 2.5vw;
+        color: white;
+    }
+    h2 {
+        font-size: 1.6vw;
+        color: white;
+        margin-top: 3%;
+        color: rgb(195, 7, 63);
+        text-decoration: underline;
+    }
+    h4 {
+        font-size: 1.45vw;
+        color: white;
+        margin-top: 3%;
+    }
+    p {
+        font-size: 1.36vw;
+        color: white;
+    }
+    video {
+        border: 5px solid rgb(195, 7, 63);
+    }
+    #nav1 .accomp {
+        color: rgb(195, 7, 63);
+    }
+    #nav1 .accomp:hover {
+    color: rgb(195, 7, 63);
+}
+</style>
+
+<h1 id="title">Programming Projects</h1>
+
+    <p>The code for all projects is on my Github. You can find my Github in the "Contact Me" tab.</p>
+
+    <div id = "digit" style = "display: inline-block; margin-top: 3%">
+        <h2 id="sub">Neural Network Based Digit Classifier (Python)</h2>
+        
+        <div id = "text" style = "float: left; width: 55%; margin-top: 2%">
+            <h4>Summary</h4>
+            <p>Model created and trained using Tensorflow.
+                The dataset used is the MNIST handwritten digits dataset.
+                The GUI was created using tkinter. User is able to “handwrite” a digit and then the model will return its best guess at which digit it is.
+                Since this is a categorical problem, I decided to use a sigmoid activation function and the sparse categorical cross entropy loss function.
+                Achieved an accuracy of 99.9% among the test data.
+            </p>
+        
+            <h4 id="sub2">What I Learned</h4>
+        
+            <p>
+                - Proper data formatting and processing techniques
+            </p>
+        
+            <p>
+                - How to efficiently train models for optimal results
+            </p>
+        
+            <p>
+                - How to save a model for future use
+            </p>
+            </div>
+        
+            <video id="MineVid" style="float: right; vertical-align: center; margin-top: 3%;" onloadstart="this.volume=0.25" width="40%" height="40%" controls>
+                <source src="{{ url_for('static', filename='images/DigitVid.mp4')}}" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div id = "stock" style = "display: inline-block; margin-top: 3%">
+            <h2 id="sub">Neural Network Based Stock Price Predictor (Python)</h2>
+            
+            <div id = "text" style = "float: left; width: 55%; margin-top: 2%">
+                <h4>Summary</h4>
+                <p>Model created and trained using Tensorflow.
+                    The dataset used is Yahoo!'s stock price dataset.
+                    This is a very crude program that is Not accurate.
+                    Although the program is not very accurate, I do not consider this a failure.
+                    The main purpose of this project was to be an intro into Tensorflow and for me to learn the basics of Tensorflow.
+                    With this goal in mind, this project was a complete success!
+                </p>
+            
+                <h4 id="sub2">What I Learned</h4>
+            
+                <p>
+                    - How neural networks are structured
+                </p>
+
+                <p>
+                    - How to gather and structure datasets
+                </p>
+            
+                <p>
+                    - How to build and train a model
+                </p>
+            
+                <p>
+                    - The syntax of Tensorflow
+                </p>
+
+                <p>
+                    - Machine Learning is a very deep and intersting field with a ton of potential!
+                </p>
+                </div>
+            
+                <video id="MineVid" style="float: right; vertical-align: center; margin-top: 3%;" onloadstart="this.volume=0.25" width="40%" height="40%" controls>
+                    <source src="{{ url_for('static', filename='images/StockVid.mp4')}}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+            </div>
+
+<div id = "minesweeper" style = "display: inline-block; margin-top: 3%">
+<h2 id="sub">Minesweeper (Python)</h2>
+
+<div id = "text" style = "float: left; width: 65%; margin-top: 2%">
+    <h4>Summary</h4>
+    <p>A remake of the retro classic, Minesweeper, with a graphical twist.
+        I used Python to write this program and used Python libraries such as 
+        Pygame and Numpy to create this game.
+    </p>
+
+    <h4 id="sub2">What I Learned</h4>
+
+    <p>
+        - Learned how to implement linear algebra (transformations and powers of transformations)
+        into a program
+    </p>
+
+    <p>
+        - Learned about exporting Python file to executables
+    </p>
+
+    <p>
+        - Actually learned how to play Minesweeper
+    </p>
+    </div>
+
+    <video id="MineVid" style="float: right; vertical-align: center; margin-top: 3%;" onloadstart="this.volume=0.25" width="30%" height="30%" controls>
+        <source src="{{ url_for('static', filename='images/MineVid.mp4')}}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+</div>
+
+<div id = "dijkstra" style = "display: inline-block; margin-top: 3%">
+<h2 id="sub">Shortest Path Finder (C++)</h2>
+
+<div id = "text" style = "float: left; width: 50%; margin-top: 2%">
+    <h4>Summary</h4>
+    <p>A small path finding app that uses Dijkstra's path finding algorithm made in C++
+    </p>
+
+    <h4 id="sub2">What I Learned</h4>
+
+    <p>
+        - App creating techniques within C++
+    </p>
+
+    <p>
+        - How to implement Dijkstra's Algorithm
+    </p>
+
+    <p>
+        - How to implement Bubble Sort
+    </p>
+</div>
+
+    <video id="PathFindingVid" style="float: right; vertical-align: center; margin-top: 3%;" onloadstart="this.volume=0.25" width="45%" height="45%" controls>
+        <source src="{{ url_for('static', filename='images/PathFindingVid.mp4')}}" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+</div>
+
+<div id = "snake" style = "display: inline-block; margin-top: 3%">
+<h2 id="sub">Snake (Python)</h2>
+
+<div id = "text" style = "float: left; width: 65%; margin-top: 2%">
+    <h4>Summary</h4>
+    <p>
+        Another remake of a fan favorite game.
+    </p>
+
+    <h4 id="sub2">What I Learned</h4>
+
+    <p>
+        - How to detect keystrokes
+    </p>
+
+    <p>
+        - Learned how to create custom graphics and display them
+    </p>
+
+    <p>
+        - Learned how to use Pygame
+    </p>
+</div>
+
+    <video id="SnakeVid" style="float:right; margin-top: 3%;" onloadstart="this.volume=0.25" width="30%" height="30%" controls>
+        <source src="{{ url_for('static', filename='images/SnakeVid.mp4')}}" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+</div>
+
+<div id = "pong" style = "display: inline-block; margin-top: 3%">
+    <h2 id="sub">Pong (Python)</h2>
+    
+    <div id = "text" style = "float: left; width: 50%; margin-top: 2%">
+        <h4>Summary</h4>
+        <p>
+            A small adaptation of yet another retro classic, Pong! Grab a friend a try it out!
+        </p>
+    
+        <h4 id="sub2">What I Learned</h4>
+    
+        <p>
+            - How to use the Python tkinter module
+        </p>
+    
+        <p>
+            - Implement kinematic equations into programming
+        </p>
+    </div>
+    
+        <video id="PathFindingVid" style="float: right; vertical-align: center; margin-top: 3%;" onloadstart="this.volume=0.25" width="45%" height="45%" controls>
+            <source src="{{ url_for('static', filename='images/PongVid2.mp4')}}" type="video/mp4">
+          Your browser does not support the video tag.
+          </video>
+    </div>
+
+<div id = "hal" style = "display: inline-block; margin-top: 3%">
+<h2 id="sub">HAL9000 (Python)</h2>
+
+<div id = "text" style = "float: left; width: 55%; margin-top: 2%">
+    <h4>Summary</h4>
+    <p>
+        My earliest project. A text-based mish mash of basic Python techniques for practice. 
+        Name inspired by antagonist from (My favorite movie of all time) "2001: A Space Odyssey".
+    </p>
+
+    <h4 id="sub2">What I Learned</h4>
+
+    <p>
+        - Importing libraries
+    </p>
+    
+    <p>
+        - Basic logic statements (if/else) and basic loops
+    </p>
+
+    <p>
+        - The basics of Python
+    </p>
+</div>
+
+    <video id="HALVid" style="float:right; vertical-align: center; margin-top: 3%;" onloadstart="this.volume=0.25" width="40%" height="40%" controls>
+        <source src="{{ url_for('static', filename='images/HALVid.mp4')}}" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+</div>
+
+<div id = "site" style = "margin-top: 7%">
+<h2 id="sub">My Online Portfolio (Python, HTML, CSS)</h2>
+
+    <p>
+        This website! I feel like a single sheet of paper isn't enough to judge whether a person is a good enough fit for a job. So I decided to make a whole website. Used the Flask framework to make this.
+    </p>
+
+    <h4 id="sub2">What I Learned</h4>
+
+    <p>
+        - Learned how to use Flask
+    </p>
+
+    <p>
+        - Learned how to build, structure, and design websites
+    </p>
+
+    <p>
+        - Learned basics of website hosting
+    </p>
+</div>
+
+<h4 style = "color: rgb(195, 7, 63); margin-top: 10%;" id="sub2">More to come</h4>
+
+{% endblock %}

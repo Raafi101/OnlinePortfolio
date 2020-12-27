@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}Accomplishments{% endblock %}
+{% block content %}
+
+<style>
+    * {
+        margin: 0px; margin-bottom: 10px; font-family: Trebuchet MS, Arial, Helvetica; background-color: rgb(26, 26, 29)
+    }
+    h1 {
+        font-size: 2.5vw;
+        color: white;
+    }
+    h2 {
+        font-size: 1.6vw;
+        color: white;
+    }
+    h4 {
+        font-size: 1.45vw;
+        color: white;
+    }
+    p {
+        font-size: 1.36vw;
+        color: white;
+    }
+    #nav1 .accomp {
+        color: rgb(195, 7, 63);
+    }
+    #nav1 .accomp:hover {
+    color: rgb(195, 7, 63);
+}
+</style>
+
+<h1 id="title">Portfolio</h1>
+
+    <h4 style = " margin-bottom: 5%">Here is my showcase. Browse through!</h4>
+
+    <button onclick = "location.href='/CSprojects';" type="CS" style = "width: 50%; height: 50%; background-color: rgb(78, 78, 80); color: white; line-height: 5vw; font-size: 2vw;">
+        <img src="{{ url_for('static', filename='images/codingLogoPic.png')}}" alt="Save icon" style = "width: 10%; height: 10%; float:left; margin-bottom: 4px; margin-top: 4px;"/>
+        Programming Projects
+    </button>
+
+    <button onclick = "location.href='/CADprojects';" type="CAD" style = "width: 50%; height: 50%; background-color: rgb(78, 78, 80); color: white; line-height: 5vw; font-size: 2vw;">
+        <img src="{{ url_for('static', filename='images/CADLogo.png')}}" alt="Save icon" style = "width: 10%; height: 10%; float:left; margin-bottom: 4px; margin-top: 4px;"/>
+        Computer Aided Design Projects
+    </button>
+
+    <button onclick = "location.href='/PSprojects';" type="PS" style = "width: 50%; height: 50%; background-color: rgb(78, 78, 80); color: white; line-height: 5vw; font-size: 2vw;">
+        <img src="{{ url_for('static', filename='images/rSquaredLogoFinal.png')}}" alt="Save icon" style = "width: 10%; height: 10%; float:left; margin-bottom: 4px; margin-top: 4px;"/>
+        Photoshop Projects
+    </button>
+
+    <button onclick = "location.href='/GuitarProgress';" type="Gu" style = "width: 50%; height: 50%; background-color: rgb(78, 78, 80); color: white; line-height: 5vw; font-size: 2vw;">
+        <img src="{{ url_for('static', filename='images/guitarLogo.png')}}" alt="Save icon" style = "width: 10%; height: 10%; float:left; margin-bottom: 4px; margin-top: 4px;"/>
+        Guitar Progress
+    </button>
+
+{% endblock %}

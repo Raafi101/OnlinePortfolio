@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+
+<style>
+    * {
+        margin: 0px; margin-bottom: 10px; font-family: Trebuchet MS, Arial, Helvetica; background-color: rgb(26, 26, 29)
+    }
+    h1 {
+        font-size: 3vw;
+        color: white;
+    }
+    p {
+        color:white; font-size: 1.7vw; text-align: center; margin-bottom: 10%;
+    }
+    h2 {
+        font-size: 1.6vw;
+        color: white;
+    }
+    h4 {
+        font-size: 1.7vw;
+        color: white;
+    }
+    #wel {
+        color:rgb(195, 7, 63);
+        font-size: 3vw;
+        margin-top: 3%;
+        font-family: Trebuchet MS, Arial, Helvetica;
+        margin-bottom: 3%;
+    }
+    body {
+        margin-top: 0px;
+    }
+    #nav1 .home {
+        color: rgb(195, 7, 63);
+    }
+    #nav1 .home:hover {
+    color: rgb(195, 7, 63);
+}
+</style>
+
+<div id = "Home">
+
+    <div id = "Greeting">
+
+        <image class = "logo" style="padding-top: 20px; background-color: rgb(26, 26, 29);margin-bottom: 0px; margin-bottom: 0%; width: 200px; height: 200px;" src="{{ url_for('static', filename='images/rSquaredLogoFinal.png')}}"></image>
+
+        <p id="wel" style = "font-size: 4vw; margin-bottom: 0%;">Raafi Rahman</p>
+
+        <p id="wel" style = "color:rgb(195, 7, 63); font-size: 3vw; margin-top: 2%;">Musician, Metaphysician, Mathematician</p>
+        <p style = "padding-bottom: 0px; margin-bottom: 2vw; margin-top: 5vw;">“Mathematics is the language in which God has written the universe”</p>
+        <p style = "align-self: center; padding-left: 42%;">― Galileo Galilei</p>
+
+    </div>
+
+    <div id = "aboutSummary" style = "width: 100%; display: inline-block; margin-top: 0%; padding: 0px;">
+        <div id = "aboutText" style = "width: 65%; float: left">
+            <p id = "wel" style = "float: left; text-align: left; margin-top: 2%; margin-bottom: 1vw;">
+                Get to know me
+            </p>
+            <p style = "text-align: left; float: left; margin-bottom: 5%;">
+                My name is Raafi Rahman. I am a native New Yorker. Currently, I am a third year student at Hunter College as a Yalow Honors Student. I am in the BA/MA program and am pursuing a Bachelors in Mathematics and a minor in Computer Science. My Masters will be in Statistics and Applied Mathematics. I attended Staten Island Technical High School where I graduated with exceptional grades and exceptional experiences. My passions include Mathematics, Physics, Space, Technology, and Music. I play three different instruments, which include the trombone, baritone, and guitar. I live my life with Mathematics in mind. I truly am passionate about the subject. Mathematics permeates through anything your mind can think of. Math is somehow related to everything, whether it is the device you are using to view this page, the music you listen to, the clothes you wear, or the biology that makes us human beings.
+            </p>
+            <button type="button" style = "font-size:1.7vw; outline: 2px solid rgb(78, 78, 80); background-color: rgb(78, 78, 80); color: white; float: left; width : 100%; height: 4vw" onclick = "location.href='/about';">Learn my story</button>
+        </div>
+        <div id = "aboutPic" style = "float: right; width:30%;">
+            <image class = "Me" style="float: center; border: 5px solid rgb(78, 78, 80); background-color: rgb(26, 26, 29);margin-right: 0px; margin-top: 5.7vw; width: 78.5%; height: 78.5%;" src="{{ url_for('static', filename='images/standing.jpg')}}"></image>
+        </div>
+    </div>
+
+    <div id = "qualSummary" style = "width: 100%; display: inline-block; margin-top: 10%; padding: 0px;">
+        <div id = "qualText" style = "width: 65%; float: left">
+            <p id = "wel" style = "float: left; text-align: left; margin-top: 2%; margin-bottom: 1vw;">
+                My Qualifications
+            </p>
+
+            <div id = "list" style = "float: left">
+            <p style = "text-align: left; margin-bottom: 3.5%; margin-left: 10%; width: 100%">
+                - Receives exceptional grades
+            </p>
+            <p style = "text-align: left; margin-bottom: 3.5%; margin-left: 10%; width: 100%">
+                - Possesses work experience
+            </p>
+            <p style = "text-align: left; margin-bottom: 3.5%; margin-left: 10%; width: 100%">
+                - Understands multiple programming languages
+            </p>
+            <p style = "text-align: left; margin-bottom: 3.5%; margin-left: 10%; width: 100%">
+                - Speaks multiple languages
+            </p>
+            <p style = "text-align: left; margin-bottom: 3.5%; margin-left: 10%; width: 100%">
+                - Plays multiple instruments
+            </p>
+            <p style = "text-align: left; margin-bottom: 3.5%; margin-left: 10%; width: 100%">
+                - Builds and upgrades computers
+            </p>
+            <p style = "text-align: left; margin-bottom: 3.5%; margin-left: 10%; width: 100%">
+                - Creates using AutoCAD and Revit360
+            </p>
+            <p style = "text-align: left; margin-bottom: 3.5%; margin-left: 10%; width: 100%">
+                - Designs using Photoshop and FinalCut
+            </p>
+            </div>
+            <button type="button" style = "font-size:1.7vw; outline: 2px solid rgb(78, 78, 80); background-color: rgb(78, 78, 80); color: white; float: left; width : 100%; height: 4vw" onclick = "location.href='/qualifications';">See how qualified I am</button>
+        </div>
+        <div id = "qualPic" style = "float: right; width:30%;">
+            <image class = "Me" style="float: center; border: 5px solid rgb(78, 78, 80); background-color: rgb(26, 26, 29);margin-right: 0px; margin-top: 5.7vw; width: 78.5%; height: 78.5%;" src="{{ url_for('static', filename='images/resumePNG.png')}}"></image>
+        </div>
+    </div>
+
+    <div id = "portfolioSummary" style = "width: 100%; display: inline-block; margin-top: 10%; padding: 0px;">
+        <div id = "portfolioText" style = "width: 65%; float: left">
+            <p id = "wel" style = "float: left; text-align: left; margin-top: 2%; margin-bottom: 1vw;">
+                My Portfolio
+            </p>
+            <p style = "text-align: left; float: left; margin-bottom: 5%;">
+                I love to keep busy. If I'm not working on something, I feel like I'm wasting time. When I'm not in class, doing homework, or studying, I get ahead on a project. My programming portfolio is the most expansive of all my portfolios. Notable projects include my "Neural Network Based Digit Classifier" (written in python, model built in Tensorflow) and a "Shortest Path Finder" (written in C++ using Dijkstra's path finding algorithm). My Photoshop library consists of many flyers I have made for the South Asian Culture Club as Hunter College. I have also created many custom logos and icons for this website, and my personal YouTube channel. Sometimes I like to design constructions. One, although nothing too fancy, but am proud of none the less, is a simple truss bridge I have created in Fusion360. In AutoCAD, I have designed many things, from floor plans, to pipe gaskets, to 3D badges. Not only do I see myself as a thinker, but also as a creator.
+            </p>
+            <button type="button" style = "font-size:1.7vw; outline: 2px solid rgb(78, 78, 80); background-color: rgb(78, 78, 80); color: white; float: left; width : 100%; height: 4vw" onclick = "location.href='/accomplishments';">See my projects</button>
+        </div>
+        <div id = "portfolioPic" style = "float: right; width:30%;">
+            <image class = "Me" style="float: center; border: 5px solid rgb(78, 78, 80); background-color: rgb(26, 26, 29);margin-right: 0px; margin-top: 5.7vw; width: 78.5%; height: 78.5%;" src="{{ url_for('static', filename='images/OpenHouse.png')}}"></image>
+        </div>
+    </div>
+
+    <div id = "contactSummary" style = "width: 100%; display: inline-block; margin-top: 10%; padding: 0px;">
+        <div id = "contactText" style = "width: 65%; float: left">
+            <p id = "wel" style = "float: left; text-align: left; margin-top: 2%; margin-bottom: 1vw;">
+                Let's Connect!
+            </p>
+            <p style = "text-align: left; float: left; margin-bottom: 5%;">
+                I'm certain I will be a valuable member to your team. Contact me today!
+            </p>
+            <button type="button" style = "font-size:1.7vw; outline: 2px solid rgb(78, 78, 80); background-color: rgb(78, 78, 80); color: white; float: left; width : 100%; height: 4vw" onclick = "location.href='/contact';">Contact me</button>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}About Me{% endblock %}
+{% block content %}
+
+<style>
+    * {
+        margin: 0px; margin-bottom: 10px; font-family: Trebuchet MS, Arial, Helvetica; background-color: rgb(26, 26, 29)
+    }
+    h1 {
+        font-size: 2.5vw;
+        color: white;
+    }
+    h2 {
+        font-size: 1.6vw;
+        color: white;
+        margin-top: 3%;
+        color: rgb(195, 7, 63);
+        text-decoration: underline;
+    }
+    h4 {
+        font-size: 1.45vw;
+        color: white;
+        margin-top: 3%;
+    }
+    p {
+        font-size: 1.36vw;
+        color: white;
+    }
+    video {
+        border: 5px solid rgb(195, 7, 63);
+    }
+    #nav1 .qual {
+        color: rgb(195, 7, 63);
+    }
+    #nav1 .qual:hover {
+    color: rgb(195, 7, 63);
+}
+</style>
+
+<h1 id="title" style = "margin-bottom: 2%;" >Current College Unofficial Transcript</h1>
+
+<h4 style = "margin-bottom: 4%;">*May not display correctly on mobile*</h4>
+
+<div>
+    <embed src="{{ url_for('static', filename='images/currentTranscript.pdf')}}" type = "application/pdf" width = "80%" height = "700px" />
+</div>
+
+{% endblock %}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+<style>
+
+body::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgb(26, 26, 29);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(78, 78, 80);
+  outline: 2px solid rgb(195, 7, 63);
+}
+
+body::-webkit-scrollbar-track-piece {
+    background-color: darkgray;
+}
+
+.qual img {
+    border: 5px solid rgb(78, 78, 80);
+}
+
+.page {
+    text-align: center ;
+    padding-top: 60px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 60px;
+    margin-bottom: 10%;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+#title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+#nav1 {
+    background-color: rgb(78, 78, 80); margin-top: 0px;
+    font-family: Trebuchet MS, Arial, Helvetica;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    z-index: 999;
+    padding-bottom: 0%;
+}
+
+#nav1 ul {
+    text-align: center; background-color: rgb(78, 78, 80); padding-bottom: 15px; 
+}
+
+#nav1 ul li {
+    display: inline-block; background-color: rgb(78, 78, 80); vertical-align: center; 
+}
+
+#nav1 a {
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 1px rgb(26, 26, 29), 0 0 1px rgb(26, 26, 29), 0 0 1px rgb(26, 26, 29), 0 0 1px rgb(26, 26, 29);
+    background-color: rgb(78, 78, 80);
+    text-align: center;
+    padding-top: 20px; 
+    padding-bottom: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 18px;
+    font-family: Trebuchet MS, Arial, Helvetica;
+}
+
+#nav1 .logoNav {
+    padding-bottom: 0px; 
+    padding-top: 10px; 
+    padding-right: 0px;
+    margin-top: 20px; 
+    vertical-align: bottom;
+    background-color: rgb(78, 78, 80)
+}
+
+#nav1 a:hover {
+    color: rgb(26, 26, 29);
+}
+
+a {
+    color:white;
+}
+
+#title {
+    color: rgb(195, 7, 63);
+    }
+
+</style>
+</head>
+
+<body>
+    <h2>
+        <nav id = "nav1">
+            <ul>
+                <image class = "logoNav" style="margin-left: 0px; background-color: rgb(78, 78, 80);margin-bottom: 0px; margin-top: 0px; padding-top: 12px; width: 50px; height: 50px;" src="{{ url_for('static', filename='images/rSquaredLogoFinal.png')}}"></image>
+                <li>
+                    <a class="home" href="/home">Home</a>
+                </li>
+                <li>
+                    <a class="about" href="/about">My Story</a>
+                </li>
+                <li>
+                    <a class="qual" href="/qualifications">Qualifications</a>
+                </li>
+                <li>
+                    <a class="accomp" href="/accomplishments">Portfolio</a>
+                </li>
+                <li>
+                    <a class="contact" href="/contact">Contact Me</a>
+                </li>
+            </ul>
+        </nav>
+    </h2>
+
+    <div class="page">
+    {% block content %}
+    {% endblock %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
